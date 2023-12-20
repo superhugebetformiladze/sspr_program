@@ -20,3 +20,8 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+tasks.register('testAndJar') {
+	dependsOn('test')
+	dependsOn('bootJar')
+}
